@@ -14,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
         crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 </head>
 
@@ -22,10 +23,10 @@
         <h3>Find the mouse by Sankati Vijayalakshmi</h3>
         <div style="background-color:rgb(236, 162, 194); color:red" ;>Click on the bushes to search for
             the mouse, beware the cat</div>
-        <div id="bushes" style="background-color:rgb(195, 240, 195); color:black">Number of bushes checked is zero</div>
-        <div id="penalty" style="background-color:rgb(208, 237, 208); color:black">Penalty is zero.</div>
-        <div style="background-color:rgb(178, 242, 178); color:black;">Click for help</div>
-        <div id="help" style="background-color:rgb(193, 239, 193); color:black">Penalty is zero.</div>
+        <div class="well" id="bushes" style="background-color:rgb(195, 240, 195); color:black">Number of bushes checked is zero</div>
+        <div class="well" id="penalty" style="background-color:rgb(208, 237, 208); color:black">Penalty is zero.</div>
+        <div class="btn btn-primary" style="background-color:rgb(178, 242, 178); color:black;" onclick="help()">Click for help</div>
+        <div class="well" id="help" style="background-color:rgb(193, 239, 193); color:black">Help Report</div>
     </div>
 
     <br>
@@ -34,84 +35,147 @@
     <div class="container">
         <div class="row">
             <div class="col-sm">
-                <img src="bush.jpg" width="140" height="140" />
+                <img src="bush.jpg" width="140" height="140" id="1" onclick="check(0)" />
             </div>
             <div class="col-sm">
-                <img src="bush.jpg" width="140" height="140" />
+                <img src="bush.jpg" width="140" height="140" id="2" onclick="check(1)" />
             </div>
             <div class="col-sm">
-                <img src="bush.jpg" width="140" height="140" />
+                <img src="bush.jpg" width="140" height="140" id="3" onclick="check(2)" />
             </div>
             <div class="col-sm">
-                <img src="bush.jpg" width="140" height="140" />
+                <img src="bush.jpg" width="140" height="140" id="4" onclick="check(3)" />
             </div>
             <div class="col-sm">
-                <img src="bush.jpg" width="140" height="140" />
+                <img src="bush.jpg" width="140" height="140"  id="5" onclick="check(4)"/>
             </div>
             <div class="col-sm">
-                <img src="bush.jpg" width="140" height="140" />
+                <img src="bush.jpg" width="140" height="140" id="6" onclick="check(5)"/>
             </div>
         </div>
         <div class="row">
         <div class="col-sm">
-            <img src="bush.jpg" width="140" height="140" />
+            <img src="bush.jpg" width="140" height="140" id="7" onclick="check(6)"/>
         </div>
         <div class="col-sm">
-            <img src="bush.jpg" width="140" height="140" />
+            <img src="bush.jpg" width="140" height="140"  id="8" onclick="check(7)"/>
         </div>
         <div class="col-sm">
-            <img src="bush.jpg" width="140" height="140" />
+            <img src="bush.jpg" width="140" height="140" id="9" onclick="check(8)"/>
         </div>
         <div class="col-sm">
-            <img src="bush.jpg" width="140" height="140" />
+            <img src="bush.jpg" width="140" height="140" id="10" onclick="check(9)"/>
         </div>
         <div class="col-sm">
-            <img src="bush.jpg" width="140" height="140" />
+            <img src="bush.jpg" width="140" height="140" id="11" onclick="check(10)" />
         </div>
         <div class="col-sm">
-            <img src="bush.jpg" width="140" height="140" />
+            <img src="bush.jpg" width="140" height="140" id="12" onclick="check(11)" />
         </div>
     </div>
     <div class="row">
     <div class="col-sm">
-        <img src="bush.jpg" width="140" height="140" />
+        <img src="bush.jpg" width="140" height="140" id="13" onclick="check(12)"/>
     </div>
     <div class="col-sm">
-        <img src="bush.jpg" width="140" height="140" />
+        <img src="bush.jpg" width="140" height="140" id="14" onclick="check(13)" />
     </div>
     <div class="col-sm">
-        <img src="bush.jpg" width="140" height="140" />
+        <img src="bush.jpg" width="140" height="140" id="15" onclick="check(14)"/>
     </div>
     <div class="col-sm">
-        <img src="bush.jpg" width="140" height="140" />
+        <img src="bush.jpg" width="140" height="140" id="16" onclick="check(15)" />
     </div>
     <div class="col-sm">
-        <img src="bush.jpg" width="140" height="140" />
+        <img src="bush.jpg" width="140" height="140" id="17" onclick="check(16)"/>
     </div>
     <div class="col-sm">
-        <img src="bush.jpg" width="140" height="140" />
+        <img src="bush.jpg" width="140" height="140" id="18" onclick="check(17)"/>
     </div>
     </div>
     <div class="row">
     <div class="col-sm">
-        <img src="bush.jpg" width="140" height="140" />
+        <img src="bush.jpg" width="140" height="140" id="19" onclick="check(18)" />
     </div>
     <div class="col-sm">
-        <img src="bush.jpg" width="140" height="140" />
+        <img src="bush.jpg" width="140" height="140" id="20" onclick="check(19)"/>
     </div>
     <div class="col-sm">
-        <img src="bush.jpg" width="140" height="140" />
+        <img src="bush.jpg" width="140" height="140" id="21" onclick="check(20)"/>
     </div>
     <div class="col-sm">
-        <img src="bush.jpg" width="140" height="140" />
+        <img src="bush.jpg" width="140" height="140" id="22" onclick="check(21)"/>
     </div>
     <div class="col-sm">
-        <img src="bush.jpg" width="140" height="140" />
+        <img src="bush.jpg" width="140" height="140" id="23" onclick="check(22)"/>
     </div>
     <div class="col-sm">
-        <img src="bush.jpg" width="140" height="140" />
+        <img src="bush.jpg" width="140" height="140" id="24" onclick="check(23)" />
     </div>
     </div>
+
+
+    <script>
+        var ids=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24];
+        var checkCount=0;
+        var penalty=0;
+        var lastCheck=0;
+        var mouseLocation=13;
+        var catLocation=21;
+        var gameOver=false;
+        function check(x){
+          console.log('in fun'+x);
+          console.log('ids[x] fun'+ids[x]);
+          var imageid=ids[x];
+          console.log('gameOver',gameOver);
+          if(!gameOver){
+            
+          var imgval=document.getElementById(imageid);
+           if (x==21){
+            document.getElementById(imageid).src="Bcat.jpg";
+            gameOver=true;
+            penalty=penalty+4;
+          }
+          else if (x==13){
+            document.getElementById(imageid).src="Mouse.jpg";
+            gameOver=true;
+            penalty=penalty-3;
+        
+          }else{
+            document.getElementById(imageid).src="Grass.jpg";
+          }
+          checkCount=checkCount+1;
+          penalty=penalty+1;
+          document.getElementById("bushes").innerHTML='Number of bushes checked is '+checkCount;
+        
+        lastCheck=x;
+        document.getElementById("penalty").innerHTML='Penalty is '+penalty;
+        }
+        
+        }
+
+        function help() {
+        var mouseRowval = parseInt(mouseLocation / 6) ;
+        var mouseColval = mouseLocation % 6; 
+        var columnval = lastCheck % 6 ;
+        var catRowval = parseInt(catLocation / 6) ;
+        var catColval = catLocation % 6;
+        var rowval = parseInt(lastCheck / 6) ;
+
+        
+        
+        if ((Math.abs(catRowval - rowval) <= 1) && (Math.abs(catColval - columnval) <= 1)) { 
+            document.getElementById("help").innerHTML = "meow";
+        }else if ((Math.abs(mouseRowval - rowval) <= 1) && (Math.abs(mouseColval - columnval) <= 1)) {
+            document.getElementById("help").innerHTML = "squeek";
+        }else {
+            document.getElementById("help").innerHTML = "sorry, no help available";
+        }
+        penalty += 2;
+        document.getElementById("penalty").innerHTML = "Penalty is " + penalty;
+    }
+
+        </script>
 
 
 </body>
