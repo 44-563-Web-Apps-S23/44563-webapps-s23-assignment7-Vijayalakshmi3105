@@ -11,12 +11,13 @@
         }
 
         .flex-container>div {
-           
+
             background-color: #515612;
             margin: 10px;
             padding: 20px;
             font-size: 30px;
         }
+
         @media (max-width: 600px) {
             .flex-container {
                 flex-direction: column;
@@ -56,6 +57,7 @@
         <button class="btn btn-dark" onclick="makeNewDiv()">Add value</button>
         <button class="btn btn-primary" onclick="get()">Get</button>
         <button class="btn btn-info" onclick="delay()">Delay</button>
+        <button class="btn btn-info" onclick="promote()">Promote</button>
 
 
 </body>
@@ -77,7 +79,7 @@
             queueItems[0].remove();
         }
         console.log('queueItems', queueItems.length);
- }
+    }
     function delay() {
         var queueItems = document.getElementsByClassName("delayQ");
         var removedId;
@@ -86,6 +88,17 @@
             queueItems[0].remove();
             let container = document.getElementById('target');
             container.appendChild(removedId);
+        }
+
+        function promote() {
+            var queueItems = document.getElementsByClassName("delayQ")
+
+            var randomval = Math.floor(Math.random() * queueItems.length);
+
+            var removedItem = queueItems[randomval];
+            queueItems[randomval].remove();
+            let container = document.getElementById('target');
+            container.insertBefore(removedItem, container.firstChild);
         }
 
     }

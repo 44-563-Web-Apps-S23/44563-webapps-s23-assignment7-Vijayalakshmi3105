@@ -30,6 +30,7 @@
     <p class="btn btn-primary" style="background-color:rgb(178, 242, 178); color:black;" onclick="help()">Click for help
     </p>
     <p class="clhu" id="help" style="background-color:rgb(193, 239, 193); color:black">Help Report</p>
+    <p class="btn btn-primary" onclick="reset()" >Click for help.</p>
     </div>
 
     <br>
@@ -172,6 +173,19 @@
               penalty += 2;
               document.getElementById("penalty").innerHTML = "Penalty is " + penalty;
           }
+
+          function reset(){
+                  for(var j=0; j<ids.length; j++){
+                    var idval=ids[j];
+                  document.getElementById(idval).src = "bush.jpg"
+                  }
+                  checkCount = 0;
+                  penalty = 0;
+                  gameOver = false;
+                  document.getElementById("penalty").innerHTML = "Penalty is zero";
+                  document.getElementById("bushes").innerHTML = "Number of bushes checked is zero";
+                  check(Math.floor(Math.random()*24));
+              }
       
   
       </script>
