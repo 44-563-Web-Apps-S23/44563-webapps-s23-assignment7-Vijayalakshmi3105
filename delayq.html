@@ -11,14 +11,12 @@
         }
 
         .flex-container>div {
-            /*div children of the flex container*/
+           
             background-color: #515612;
             margin: 10px;
             padding: 20px;
             font-size: 30px;
         }
-
-        /* Responsive layout */
         @media (max-width: 600px) {
             .flex-container {
                 flex-direction: column;
@@ -64,29 +62,23 @@
 </div>
 <script>
     function makeNewDiv() {
-        /* make the div and its text */
         var textval = document.getElementById('inputval').value;
         let element = document.createElement("div");
         element.innerHTML = textval;
         element.style.color = "Green";
         element.className = "delayQ";
-        /* add it to the container */
         let container = document.getElementById('target');
         container.appendChild(element);
-
     }
     function get() {
-        /* make the div and its text */
         var queueItems = document.getElementsByClassName("delayQ");
         console.log('queueItems', queueItems.length);
         if (queueItems.length > 0) {
             queueItems[0].remove();
         }
         console.log('queueItems', queueItems.length);
-
-    }
+ }
     function delay() {
-        /* make the div and its text */
         var queueItems = document.getElementsByClassName("delayQ");
         var removedId;
         if (queueItems.length != 0 || queueItems.length != 1) {
